@@ -1,0 +1,1 @@
+This is my notes and work for Violent Python - available [here](https://repo.zenk-security.com/Programmation/Violent%20Python%20a%20Cookbook%20for%20Hackers-Forensic%20Analysts-Penetration%20testers%20and%20Security%20Engineers.pdf)
