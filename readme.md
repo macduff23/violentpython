@@ -5,3 +5,5 @@ I've previously worked through about half of the work in Learning Python the Har
 I may start and stop this depending on how my priorities change, but I hope to steadily contribute to this until I'm done. I guess only time will tell.
 
 I'll heavily comment where possible to show why and how I did the things that I did. Some of the stuff will look unfinished. If I moved on, its because I got the point and don't want to beat a dead horse.
+
+I decided to do this as a github repo with notes on chapter 2. There's no notes for chapter one and I think i skipped some parts. Deal with it. 
