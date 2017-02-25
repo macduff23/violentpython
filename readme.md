@@ -1,4 +1,4 @@
-This is my notes and work for Violent Python - available [here](https://repo.zenk-security.com/Programmation/Violent%20Python%20a%20Cookbook%20for%20Hackers-Forensic%20Analysts-Penetration%20testers%20and%20Security%20Engineers.pdf)
+This is my notes and work for Violent Python - available in places i won't link because maybe they're not legit even though google will find them quick. 
 
 I've previously worked through about half of the work in Learning Python the Hard Way and an Udemy course, but they teach a lot of things I don't care about, like adding and stuff. I'm sure it'll come in handy eventually, but learning by doing always seems much easier for me. 
 
