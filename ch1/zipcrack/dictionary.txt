@@ -1,0 +1,9 @@
+hello
+password
+password1
+test
+fail
+password!
+wowowowow
+1234567
+thiswillnotwork
