@@ -1,17 +1,33 @@
+#import your modules.
+#we're only importing part of Thread here
 import zipfile
 from threading import Thread
+
+#define your module for unzipping the zip. 
 def extractFile(zFile, password):
 	try:
+#here, the password we're trying is the password variable.
 		zFile.extractall(pwd=password)
 		print '[+] Found password ' + password + '\n'
+#interesting answer on pass vs return - 
+# http://stackoverflow.com/questions/21553327/why-is-except-pass-a-bad-programming-practice
 	except:
 		pass
+		
+#main function first uses evil.zip and then read dictionary to for loop through it. 
 def main():
 	zFile = zipfile.ZipFile('evil.zip')
 	passFile = open('dictionary.txt')
 	for line in passFile.readlines():
 		password = line.strip('\n')
+		
+#Threading happens here. define t to thread with 2 arguments, 
+#target and arguments - target is the function from above we'll thread (extractFile)
+#args are the arguments for that. 
 		t = Thread(target=extractFile, args=(zFile,password))
 		t.start()
+		
+#do it. 
+
 if __name__ == '__main__':
 	main()
