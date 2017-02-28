@@ -24,7 +24,7 @@ def connect(user, rhost, password):
 		return
 	if ret == 1:
 		child.sendline('yes')
-		ret = child.expect([pexecpt.TIMEOUT, '[P|p]assword:'])
+		ret = child.expect([pexpect.TIMEOUT, '[P|p]assword:'])
 	if ret == 0:
 		print '[-] Error Connecting'
 		return
