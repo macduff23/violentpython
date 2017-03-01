@@ -31,7 +31,7 @@ def connect(user, rhost, password):
 	child.sendline(password)
 	child.expect(PROMPT)
 	return child
-	
+
 def main():
 #I edited the script to parse my command so i can send any host I wanted to the script
 #interestingly you need to use -H for host because it conflicts with -h for help. 
