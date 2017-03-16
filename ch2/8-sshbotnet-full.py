@@ -1,5 +1,11 @@
+#Original script doesn't work. The book calls to import pxssh, but that can't
+#imported on it's own. Instead, you need to import pxssh from pexpect. I'm
+#using Kali 2.0 minimalist updated as of 3.15.17.
+
+
 import optparse
-from pexpect import *
+from pexpect import pxssh
+
 
 #we define a class first. 
 
@@ -9,7 +15,9 @@ class Client:
         self.host = host
         self.user = user
         self.password = password
-        self.session = self.connect
+#This () ended up being very important. Without it, the def send_command
+#bit wasn't recognized at all. I need to do some figuring here.
+        self.session = self.connect()
 
     def connect(self):
         try:
@@ -20,8 +28,8 @@ class Client:
             print e
             print '[-] Error Connecting'
 
-    def send_command(self, cmd):
-        self.session.sendline(cmd)
+    def send_command(self, command):
+        self.session.sendline(command)
         self.session.prompt()
         return self.session.before
 
