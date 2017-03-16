@@ -1,13 +1,13 @@
 #Original script doesn't work. The book calls to import pxssh, but that can't
 #imported on it's own. Instead, you need to import pxssh from pexpect. I'm
 #using Kali 2.0 minimalist updated as of 3.15.17.
-
+#This script was adjusted for my network
 
 import optparse
 from pexpect import pxssh
 
 
-#we define a class first. 
+#we define a class first.
 
 class Client:
 
@@ -28,8 +28,8 @@ class Client:
             print e
             print '[-] Error Connecting'
 
-    def send_command(self, command):
-        self.session.sendline(command)
+    def send_command(self, cmd):
+        self.session.sendline(cmd)
         self.session.prompt()
         return self.session.before
 
@@ -44,8 +44,8 @@ def addClient(host, user, password):
     botNet.append(client)
 
 botNet = []
-addClient('10.2.1.1', 'root', 'toor')
-addClient('10.2.1.2', 'root', 'toor')
-addClient('10.2.1.3', 'root', 'toor')
+addClient('10.0.2.1', 'root', 'toor')
+addClient('10.0.2.2', 'root', 'toor')
+addClient('10.0.2.3', 'root', 'toor')
 botnetCommand('uname -v')
 botnetCommand('ip addr')
