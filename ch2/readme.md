@@ -8,3 +8,5 @@ for i in `cat sites`; do host $i >> results; done
 ```
 
 i want to do this in python from now on because might as well. 
+
+I also think there's a lot of content in here to have in one directory, so new sub directories were made and files were dropped into them. 
